@@ -1,6 +1,6 @@
 <?php
 
-namespace src\xek;
+namespace xek;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
@@ -29,12 +29,13 @@ class Main extends PluginBase implements Listener{
 			case "totem":
 				if ($sender instanceof Player) {
 					$this->TotemEffect($sender);
-                }
-            case "abby":
-                if ($sender instanceof Player) {
-                    $sender->sendMessage("xek's crush is abby.");
-                }
-			break;			
+                        }
+                        case "abby":
+                                if ($sender instanceof Player) {
+                                        $sender->sendMessage("xek's crush is abby.");
+                        }
+			break;
+		}
         }
     }
         
