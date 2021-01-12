@@ -36,19 +36,13 @@ class Main extends PluginBase implements Listener{
         
     public function TotemEffect(Player $player){
         $original = $player->getInventory()->getItemInHand();
-        $player->getInventory()->setItemInHand(Item::get(Item::TOTEM));
-        
-        $pk = new ActorEventPacket();
-        $pk->entityRuntimeId = $player->getId();
-        $pk->event = ActorEventPacket::CONSUME_TOTEM;
-        $pk->data = 0;
-        $player->dataPacket($pk);
-        
-        $pk = new LevelEventPacket();
-        $pk->evid = LevelEventPacket::EVENT_SOUND_TOTEM;
-        $pk->data = 0;
-        $pk->position = $player->asVector3();
-        $player->dataPacket($pk);
+	$player->getInventory()->setItemInHand(Item::get(450,0,1));
+	$player->broadcastEntityEvent(ActorEventPacket::CONSUME_TOTEM);
+	$pk = new LevelEventPacket();
+	$pk->evid = LevelEventPacket::EVENT_SOUND_TOTEM;
+	$pk->position = $player->add(0, $player->eyeHeight, 0);
+	$pk->data = 0;
+	$player->dataPacket($pk);
         $player->getInventory()->setItemInHand($original);
         }
     }
