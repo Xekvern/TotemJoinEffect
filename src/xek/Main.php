@@ -30,12 +30,7 @@ class Main extends PluginBase implements Listener{
 				if ($sender instanceof Player) {
 					$this->TotemEffect($sender);
                         }
-                        case "abby":
-                                if ($sender instanceof Player) {
-                                        $sender->sendMessage("xek's crush is abby.");
-                        }
-			break;
-		}
+		        break;
         }
     }
         
