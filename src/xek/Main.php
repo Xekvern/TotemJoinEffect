@@ -1,6 +1,6 @@
 <?php
 
-namespace xek;
+namespace src\xek;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
