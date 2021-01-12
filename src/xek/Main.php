@@ -32,10 +32,12 @@ class Main extends PluginBase implements Listener{
 			case "totem":
 				if ($sender instanceof Player) {
 					$this->TotemEffect($sender);
-                        }
-		        break;
-        }
-    }
+				}
+			break;
+			
+		}
+		return true;
+	}
         
     public function TotemEffect(Player $player){
         $original = $player->getInventory()->getItemInHand();
