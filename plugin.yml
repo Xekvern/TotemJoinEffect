@@ -1,0 +1,6 @@
+name: TotemJoinEffect
+author: xek
+main: src\xek\Main
+version: 1.0.0
+api: [3.0.0]
+description: Pop up totem on player join.
